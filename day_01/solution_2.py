@@ -15,8 +15,6 @@ for i in range(len(second_list)):
   if(list_count_dict.__contains__(second_list[i])):
     list_count_dict[second_list[i]] += 1
 
-print([f"({x}:{y})" for x,y in list_count_dict.items() if y != 0])
-
 total_count = 0
 
 for (k,v) in list_count_dict.items():
