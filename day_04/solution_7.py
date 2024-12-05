@@ -1,9 +1,7 @@
 import src, helpers
 
 matrix = src.task_input.split("\n")
-# print(matrix)
 transposed = [''.join(list(col)) for col in zip(*matrix)]
-# print(transposed)
 
 diagonals = {}
 reversed_diagonals = {}
@@ -24,8 +22,6 @@ for i in range(len(matrix)):
 
 result = [''.join(diagonals[key]) for key in sorted(diagonals.keys())]
 result_reversed = [''.join(reversed_diagonals[key]) for key in sorted(reversed_diagonals.keys())]
-# print(result)
-# print(result_reversed)
 
 total_strings = matrix + transposed + result + result_reversed
 
