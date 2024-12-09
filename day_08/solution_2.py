@@ -7,8 +7,6 @@ def add_antenna(a_i, a_j, temp_cache : dict, roof):
 
 def calculate_dif(signal, roof_cache : dict, pair_of_antennas_set : set):
   values = [x for x in roof_cache.keys() if roof_cache[x] == signal]
-  if signal == 'Q':
-    print(values)
   for i in range(len(values)):
     for j in range(i,len(values)):
       if i == j : 
@@ -38,8 +36,6 @@ unique_tuples = []
 for sublist in [x.potential_anti_antennas for x in pair_of_antennas_set]:
     unique_tuples.extend(sublist)
 
-print(unique_tuples)
-
 anti_count = 0
 hash_count = 0
 for point in unique_tuples:
@@ -58,5 +54,4 @@ for i in range(len(roof)):
       anti_count += 1
 
 
-print(hash_count)
 print(anti_count)

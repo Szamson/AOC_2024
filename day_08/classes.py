@@ -14,9 +14,7 @@ class PairOfAntennas:
     self.calculate_dif()
   
   def calculate_dif(self):
-    print((self.p2[0] - self.p1[0], self.p2[1] - self.p1[1]))
     self.dif = simplify_fraction(self.p2[0] - self.p1[0], self.p2[1] - self.p1[1])
-    print(self.dif)
     self.generate_potential_anti_antennas_multiple() #generate_potential_anti_antennas for puzzle1 generate_potential_anti_antennas_multiple for puzzle_2
 
   def generate_potential_anti_antennas(self):
