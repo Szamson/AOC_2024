@@ -15,8 +15,6 @@ def dfs_iterative(grid, start_x, start_y):
     path = []
     stack = [(start_x, start_y)]
     trail_score = 0
-    trail_id = 0
-    trial_rating = 0
     while stack:
         x, y = stack.pop()
         if (x, y) in visited:
@@ -31,10 +29,9 @@ def dfs_iterative(grid, start_x, start_y):
         for dx, dy in directions:
             nx, ny = x + dx, y + dy
             if 0 <= nx < rows and 0 <= ny < cols and (nx, ny) not in visited and grid[x][y] + 1 == grid[nx][ny]:
-                trial_rating += 1
                 stack.append((nx, ny))
     # print(path)
-    return trial_rating
+    return trail_score
 
 trial_count_score = 0
 for start in trial_starts:
